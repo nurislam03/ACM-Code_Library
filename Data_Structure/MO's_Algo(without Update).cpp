@@ -8,7 +8,7 @@ using namespace std;
    1. Given u and v, find number of distinct elements from u to v.
    Time Complexity O( N*sqrt( N ) )
 **/
-#define Size 50005
+
 int blockSize; //sqrt(N)
 int A[Size];
 int cnt[1000005]; /// As big as an array elements.
@@ -78,15 +78,15 @@ int main()
     //write("output.txt");
 
 	int N, Q;
-	scanf("%d %Q", &N, &Q);
+	scanf("%d %d", &N, &Q);
 	blockSize = sqrt(2*N);
 
 	for (int i = 1; i <= N; i++){
 		scanf("%d", &A[i]);
 	}
-	//scanf("%d", &Q);
+
 	for (int i = 1; i <= Q; i++){
-		scanf("%C %d %d", &qList[i].l, &qList[i].r);
+		scanf("%d %d", &qList[i].l, &qList[i].r);
 		qList[i].id = i;
 	}
 
